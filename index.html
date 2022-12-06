@@ -90,8 +90,13 @@
             if(i<10) return "0"+i;
             return i;
         }
+        var a = new Array("日", "一", "二", "三", "四", "五", "六");  
+        var week = new Date().getDay();  
+        var str = "星期"+ a[week];
+
+
         var box=document.getElementById("date");
-        box.innerHTML=year+"年"+month+"月"+day+"日 "+hour+":"+minite+":"+second+"星期六";
+        box.innerHTML=year+"年"+month+"月"+day+"日 "+hour+":"+minite+":"+second+str;
 
 
     },1000)
